@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    
+    <button class="submit" onclick="changeColor('red')">red</button>
+    <button class="submit" onclick="changeColor('green')">green</button>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+  var currentColor = ''
+  function changeColor(color) {
+    // currentColor = color;
+    // console.log(content);
+    if (currentColor != color) {
+        currentColor = color;
+        $.ajax({
+      type: "POST",
+      url: '/api/changeColor',
+      dataType: "json",
+      data: {
+        color: currentColor
+      },
+      success: function (data) {
+        console.log(data);
+        console.log(data, 'on success');
+      }
+    })
+    }
+  }
+   
+  const interval = setInterval(function() {
+   // method to be executed;
+   console.log('this is being excecuted');
+   $.ajax({
+      type: "GET",
+      url: '/getCurrentColor',
+      dataType: 'json',
+      success: function(res){
+          console.log(res);
+          
+            currentColor = res.color;
+            document.body.style.backgroundColor = res.color;
+          
+          
+      }
+  })
+ }, 1000);
+
+// clearInterval(interval); 
+ </script>
+</body>
+</html>
