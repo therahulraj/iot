@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../public', 'index.html'));
     });
 
+//this is just to just to learn more about git.
 
 app.post('/api/changeColor',urlencodedParser, (req, res) => {
     console.log(req.body.color);
