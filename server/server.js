@@ -22,6 +22,8 @@ app.get('/', (req, res) => {
 
 //this is just to just to learn more about git.
 
+//this is for the 3rd brach.
+
 app.post('/api/changeColor',urlencodedParser, (req, res) => {
     console.log(req.body.color);
     global_color = req.body.color;
