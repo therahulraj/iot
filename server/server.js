@@ -24,6 +24,9 @@ app.get('/', (req, res) => {
 
 //this is just to just to learn more about git.
 
+//this is for the 3rd brach.
+
+//this is change in remote branch in 1st branch.
 //this is for second branch.
 
 //let's see if this goes to the remote branch.
@@ -36,7 +39,6 @@ app.get('/', (req, res) => {
 
 //this is the current change #1
 
-<<<<<<< HEAD
 //see change #4
 
 //see change #5
@@ -44,9 +46,6 @@ app.get('/', (req, res) => {
 //see change #6
 
 //see change #7
-=======
-//change #8
->>>>>>> a35e7e9a0d22c8aa71090c3f9c53b4a04c732f40
 
 app.post('/api/changeColor',urlencodedParser, (req, res) => {
     console.log(req.body.color);
