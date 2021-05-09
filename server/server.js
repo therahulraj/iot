@@ -36,6 +36,7 @@ app.get('/', (req, res) => {
 
 //this is the current change #1
 
+<<<<<<< HEAD
 //see change #4
 
 //see change #5
