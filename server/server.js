@@ -42,6 +42,8 @@ app.get('/', (req, res) => {
 
 //see change #6
 
+//see change #7
+
 app.post('/api/changeColor',urlencodedParser, (req, res) => {
     console.log(req.body.color);
     global_color = req.body.color;
