@@ -36,15 +36,12 @@ app.get('/', (req, res) => {
 
 //this is the current change #1
 
-
 //see change #4
 
 //see change #5
 
 //see change #6
-
 //change #8
-
 
 app.post('/api/changeColor',urlencodedParser, (req, res) => {
     console.log(req.body.color);
