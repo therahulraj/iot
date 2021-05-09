@@ -44,6 +44,9 @@ app.get('/', (req, res) => {
 //see change #6
 
 //see change #7
+=======
+//change #8
+>>>>>>> a35e7e9a0d22c8aa71090c3f9c53b4a04c732f40
 
 app.post('/api/changeColor',urlencodedParser, (req, res) => {
     console.log(req.body.color);
