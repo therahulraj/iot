@@ -32,6 +32,8 @@ app.get('/', (req, res) => {
 
 //let's see if this new branch thing syncs to the main branch.
 
+//this is the current change #1
+
 app.post('/api/changeColor',urlencodedParser, (req, res) => {
     console.log(req.body.color);
     global_color = req.body.color;
